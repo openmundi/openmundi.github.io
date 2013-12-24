@@ -9,11 +9,10 @@ title: Welcome
 Contents:
 
 * [What's `world.db`?](#whatis)
+* [Web Admin Site](#webadmin)
 * [Data Sets](#data-sets)
     * [Countries](#countries)
     * [Cities](#cities)
-* [Demo](#demo)
-* [Command Line Tool](#tools)
 * [Tables, Schema](#schema)
 * [About, License](#license)
 * [Questions? Comments?](#questions)
@@ -24,13 +23,38 @@ Contents:
 ## What's `world.db`?   {#whatis}
 
 A free open public domain world database 'n' schema
-for use in any (programming) language (e.g. uses plain text fixtures/data sets).
+for use in any (programming) language (e.g. uses plain text fixtures/data sets). Example:
+
+~~~
+### Countries
+
+ca, Canada,          CAN, 9_984_670 km²,  34_278_406, un|north america
+mx, México [Mexico], MEX, 1_972_550 km², 112_322_757, un|north america
+us, United States,   USA, 9_629_091 km², 314_167_157, un|north america
+...
+~~~
+
+~~~
+### Cities
+
+Wien [Vienna], W,  1_731_236, m:1_724_000
+Graz,          ST,   265_318
+Linz,          O,    191_107
+Salzburg,      S,    148_521
+Innsbruck,     T,    121_329
+...
+~~~
+
+
+## Web Admin Site   {#webadmin}
+
+Try the `world.db` web admin app running
+on Heroku [`worlddb.herokuapp.com`](http://worlddb.herokuapp.com).
+
 
 ## Data Sets  {#data-sets}
 
 ### Countries  {#countries}
-
-[`north-america/countries.txt`](https://github.com/openmundi/world.db/blob/master/north-america/countries.txt):
 
 ~~~
 ca, Canada,          CAN, 9_984_670 km²,  34_278_406, un|north america
@@ -38,9 +62,9 @@ mx, México [Mexico], MEX, 1_972_550 km², 112_322_757, un|north america
 us, United States,   USA, 9_629_091 km², 314_167_157, un|north america
 ~~~
 
-### Cities  {#cities}
+Source: [`north-america/countries.txt`](https://github.com/openmundi/world.db/blob/master/north-america/countries.txt):
 
-[`europe/at-austria/cities.txt`](https://github.com/openmundi/world.db/blob/master/europe/at-austria/cities.txt):
+### Cities  {#cities}
 
 ~~~
 Wien [Vienna], W,  1_731_236, m:1_724_000
@@ -50,6 +74,10 @@ Salzburg,      S,    148_521
 Innsbruck,     T,    121_329
 ~~~
 
+Source: [`europe/at-austria/cities.txt`](https://github.com/openmundi/world.db/blob/master/europe/at-austria/cities.txt):
+
+
+
 The plain text format reader skips comments (starting with `#`)
 and blank lines. Example:
 
@@ -58,33 +86,6 @@ and blank lines. Example:
 # Your comments here
 #
 ~~~
-
-
-## Demo   {#demo}
-
-Try the `world.db` Web Admin demo running
-on Heroku [`worlddb.herokuapp.com`](http://worlddb.herokuapp.com).
-
-
-##  Command Line Tool   {#tools}
-
-Use the `worlddb` command line tool to build yourself a copy of
-the `world.db` from the plain text fixtures in two steps.
-
-Step 1:  Get a copy of the `world.db` fixtures
-
-    $ git clone git://github.com/openmundi/world.db.git
-
-Step 2:  Let's build the `world.db`
-
-    $ worldb setup --include ./world.db
-
-That's it. See the [`worlddb` command line tool project](https://github.com/geraldb/world.db.ruby)
-for more.
-
-
-![](https://raw.github.com/openmundi/openmundi.github.io/master/i/sqlitestudio.png)
-
 
 ## Tables, Schema   {#schema}
 
