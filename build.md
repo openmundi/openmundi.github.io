@@ -25,7 +25,7 @@ Step 1:  Get a copy of the `world.db` fixtures
 
 Step 2:  Let's build the `world.db`
 
-    $ worldb setup --include ./world.db
+    $ worlddb setup --include ./world.db
 
 That's it. See the [`worlddb` command line tool project](https://github.com/geraldb/world.db.ruby)
 for more.
