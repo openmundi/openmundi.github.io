@@ -27,13 +27,11 @@ for use in any (programming) language (e.g. uses plain text datasets).
 
 **Schema Diagram**
 
+![](i/worlddb-models.png)
+
 Everything is a place.
 
 ![](i/worlddb-models-place.png)
-
-Continents > Countries > States > Cities.
-
-![](i/worlddb-models.png)
 
 
 **Datasets Examples**
