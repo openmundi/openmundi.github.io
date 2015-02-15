@@ -23,7 +23,20 @@ Contents:
 ## What's `world.db`?   {#whatis}
 
 A free open public domain world database 'n' schema
-for use in any (programming) language (e.g. uses plain text fixtures/data sets). Example:
+for use in any (programming) language (e.g. uses plain text datasets).
+
+**Schema Diagram**
+
+Everything is a place.
+
+![](i/worlddb-models-place.png)
+
+Continents > Countries > States > Cities.
+
+![](i/worlddb-models.png)
+
+
+**Datasets Examples**
 
 ~~~
 ### Countries
