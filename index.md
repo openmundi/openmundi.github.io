@@ -9,11 +9,10 @@ title: Welcome
 Contents:
 
 * [What's `world.db`?](#whatis)
-* [Web Admin Site](#webadmin)
-* [Data Sets](#data-sets)
+* [Datasets](#datasets)
     * [Countries](#countries)
     * [Cities](#cities)
-* [Tables, Schema](#schema)
+* [Web Admin Site](#webadmin)
 * [About, License](#license)
 * [Questions? Comments?](#questions)
 </div>
@@ -34,43 +33,14 @@ Everything is a place.
 ![](i/worlddb-models-place.png)
 
 
-**Datasets Examples**
-
-~~~
-### Countries
-
-ca, Canada,          CAN, 9_984_670 km²,  34_278_406, un|north america
-mx, México [Mexico], MEX, 1_972_550 km², 112_322_757, un|north america
-us, United States,   USA, 9_629_091 km², 314_167_157, un|north america
-...
-~~~
-
-~~~
-### Cities
-
-Wien [Vienna], W,  1_731_236, m:1_724_000
-Graz,          ST,   265_318
-Linz,          O,    191_107
-Salzburg,      S,    148_521
-Innsbruck,     T,    121_329
-...
-~~~
-
-
-## Web Admin Site   {#webadmin}
-
-Try the `world.db` web admin app running
-on Heroku [`worlddb.herokuapp.com`](http://worlddb.herokuapp.com).
-
-
-## Data Sets  {#data-sets}
+## Datasets  {#datasets}
 
 ### Countries  {#countries}
 
 ~~~
-ca, Canada,          CAN, 9_984_670 km²,  34_278_406, un|north america
-mx, México [Mexico], MEX, 1_972_550 km², 112_322_757, un|north america
-us, United States,   USA, 9_629_091 km², 314_167_157, un|north america
+ca, Canada,          CAN, 9 984 670 km²,  34 278 406, un|north america
+mx, México [Mexico], MEX, 1 972 550 km², 112 322 757, un|north america
+us, United States,   USA, 9 629 091 km², 314 167 157, un|north america
 ~~~
 
 Source: [`north-america/countries.txt`](https://github.com/openmundi/world.db/blob/master/north-america/countries.txt):
@@ -78,82 +48,20 @@ Source: [`north-america/countries.txt`](https://github.com/openmundi/world.db/bl
 ### Cities  {#cities}
 
 ~~~
-Wien [Vienna], W,  1_731_236, m:1_724_000
-Graz,          ST,   265_318
-Linz,          O,    191_107
-Salzburg,      S,    148_521
-Innsbruck,     T,    121_329
+Wien [Vienna], W,   1 731 236
+Graz,          ST,    265 318
+Linz,          O,     191 107
+Salzburg,      S,     148 521
+Innsbruck,     T,     121 329
 ~~~
 
 Source: [`europe/at-austria/cities.txt`](https://github.com/openmundi/world.db/blob/master/europe/at-austria/cities.txt):
 
 
+## Web Admin Site   {#webadmin}
 
-The plain text format reader skips comments (starting with `#`)
-and blank lines. Example:
-
-~~~
-###################################################
-# Your comments here
-#
-~~~
-
-## Tables, Schema   {#schema}
-
-The `world.db` includes the following tables:
-
-* countries
-* regions
-* cities
-* tags
-* taggings (many-to-many join table for tags+countries/regions/cities)
-* langs
-* usages (many-to-many join table for langs+countries)
-* props
-
-[add schema pic here]
-
-###  `countries` Table
-
-    CREATE TABLE "countries" (
-      "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-      "title" varchar(255) NOT NULL,
-      "key" varchar(255) NOT NULL,
-      "tag" varchar(255) NOT NULL,
-      "synonyms" varchar(255),
-      "pop" integer,
-      "area" integer,
-      "created_at" datetime NOT NULL,
-      "updated_at" datetime NOT NULL
-    );
-
-###  `regions` Table
-
-    CREATE TABLE "regions" (
-      "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-      "title" varchar(255) NOT NULL,
-      "key" varchar(255) NOT NULL,
-      "synonyms" varchar(255),
-      "country_id" integer NOT NULL,
-      "pop" integer, "area" integer,
-      "created_at" datetime NOT NULL,
-      "updated_at" datetime NOT NULL
-    );
-
-###  `cities` Table
-
-    CREATE TABLE "cities" (
-      "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-      "title" varchar(255) NOT NULL,
-      "key" varchar(255) NOT NULL,
-      "synonyms" varchar(255),
-      "country_id" integer NOT NULL,
-      "region_id" integer,
-      "pop" integer,
-      "area" integer,
-      "created_at" datetime NOT NULL,
-      "updated_at" datetime NOT NULL
-    );
+Try the `world.db` web admin app running
+on Heroku [`worlddb.herokuapp.com`](http://worlddb.herokuapp.com).
 
 
 ## Real World Usage
@@ -190,10 +98,6 @@ in Ruby on Rails (version 3.2 and up).
 
 
 
-## Thank You - Contributors - ¡Gracias! - Obrigado - Danke
-
-Ernesto Chapon - William de Melo Gueiros
-
 ## License    {#license}
 
 The `world.db` schema, data and scripts are dedicated to the public domain.
@@ -201,8 +105,4 @@ Use it as you please with no restrictions whatsoever.
 
 
 {% include questions.md %}
-
-
-
-
 
