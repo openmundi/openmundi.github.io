@@ -84,18 +84,7 @@ in Ruby on Rails (version 3.2 and up).
 
 ## Alternatives
 
-[geonames.org](http://geonames.org) - open geo (geographical) database covers all countries and contains over eight million placenames
-
-[worlddb](http://code.google.com/p/worlddb) -  open world database alpha; includes country, region & city names in many languages names and latitude and longitude numbers and country's iso 2-letter code.
-
-[countries](https://github.com/hexorx/countries) - world countries; includes data from ISO 3166 (countries and states/subdivisions ), ISO 4217 (currency), and E.164 (phone numbers).
-
-[countries](https://github.com/mledoze/countries) - world countries with iso codes, currencies and more in JSON, CSV and XML.
-
-[django-cities](https://github.com/coderholic/django-cities) - python script for importing countries, regions, cities etc. from geonames.org
-
-[current-countries-of-earth](https://github.com/ewheeler/current-countries-of-earth) - python script to fetch current ISO 3166 country info; output as JSON
-
+See the [`awesome-world`] page at the Planet Open Data.
 
 
 ## License    {#license}
