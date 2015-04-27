@@ -48,14 +48,17 @@ Source: [`north-america/countries.txt`](https://github.com/openmundi/world.db/bl
 ### Cities  {#cities}
 
 ~~~
-Wien [Vienna], W,   1 731 236
-Graz,          ST,    265 318
-Linz,          O,     191 107
-Salzburg,      S,     148 521
-Innsbruck,     T,     121 329
+Toronto,            ON,   5 583 064
+Montréal|Montreal,  QC,   3 824 221
+Vancouver,          BC,   2 313 328
+Ottawa,             ON,   1 236 324
+Calgary,            AB,   1 214 839
+Edmonton,           AB,   1 159 869
+Québec,             QC,     765 706
+Winnipeg,           MB,     730 018
 ~~~
 
-Source: [`europe/at-austria/cities.txt`](https://github.com/openmundi/world.db/blob/master/europe/at-austria/cities.txt):
+Source: [`north-america/ca-canada/cities.txt`](https://github.com/openmundi/world.db/blob/master/north-america/ca-canada/cities.txt):
 
 
 ## Web Admin Site   {#webadmin}
@@ -84,7 +87,7 @@ in Ruby on Rails (version 3.2 and up).
 
 ## Alternatives
 
-See the [`awesome-world`] page at the Planet Open Data.
+See the [`awesome-world`](https://github.com/planetopendata/awesome-world) page at the Planet Open Data.
 
 
 ## License    {#license}
