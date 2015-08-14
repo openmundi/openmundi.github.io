@@ -27,8 +27,7 @@ Step 2:  Let's build the `world.db`
 
     $ worlddb setup --include ./world.db
 
-That's it. See the [`worlddb` command line tool project](https://github.com/geraldb/world.db.ruby)
-for more.
+That's it. See the [`worlddb` command line tool project](https://github.com/worlddb/world.db.tools) for more.
 
 
 ![](https://raw.github.com/openmundi/openmundi.github.io/master/i/sqlitestudio.png)
@@ -36,5 +35,4 @@ for more.
 
 
 {% include questions.md %}
-
 
